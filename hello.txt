@@ -14,3 +14,29 @@ For example,
 git add . is read as git | add | ., where the period represents everything in the current directory;
 git commit -m "message" is read as git | commit -m | "message"; and
 git status is read as git | status | (no destination).
+ 
+
+
+
+git config --global user.name "Your Name"
+git config --global user.email "yourname@example.com"
+GitHub recently changed the default branch on new repositories from master to main. Change the default branch for Git using this command:
+
+git config --global init.defaultBranch main
+To enable colorful output with git, type
+
+git config --global color.ui auto
+To verify that things are working properly, enter these commands and verify whether the output matches your name and email address.
+
+git config --get user.name
+git config --get user.email
+to make key
+ssh-keygen -t ed25519 -C <youremail>
+ssh-keygen -t ed25519 -C odin@theodinproject.com
+
+cat ~/.ssh/id_ed25519.pub
+
+Highlight and copy the output, which starts with ssh-ed25519 and ends with your email address.
+
+Now, go back to GitHub in your browser window and paste the key you copied into the key field. Then, click Add SSH key. You’re done! You’ve successfully added your SSH key
+
